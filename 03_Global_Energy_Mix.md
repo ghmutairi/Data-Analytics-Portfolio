@@ -50,3 +50,5 @@ let
 in
     ReplacedNulls
 ```
+📊 The Energy Landscape Visualized (Power BI):
+[Global Energy Mix Transitions & Consumption Trends (2004 - 2024).pdf](https://github.com/user-attachments/files/27099060/Global.Energy.Mix.Transitions.Consumption.Trends.2004.-.2024.pdf)
