@@ -36,4 +36,4 @@ The analysis successfully translated the data into actionable strategic insights
 This project demonstrates my ability to take fragmented operational data and build a compelling, data-driven narrative that can directly influence capital allocation, sustainability reporting, and strategic energy planning.
 
 ---
-*(Note: Visual dashboards and SQL script snippets are available upon request).*
+
