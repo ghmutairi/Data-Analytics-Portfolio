@@ -52,3 +52,5 @@ in
 ```
 📊 The Energy Landscape Visualized (Power BI):
 [Global Energy Mix Transitions & Consumption Trends (2004 - 2024).pdf](https://github.com/user-attachments/files/27099060/Global.Energy.Mix.Transitions.Consumption.Trends.2004.-.2024.pdf)
+<img width="1112" height="639" alt="GE" src="https://github.com/user-attachments/assets/9120eeca-7c57-4a44-8233-5fd311b2f80b" />
+
