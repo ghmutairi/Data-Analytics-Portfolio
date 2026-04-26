@@ -7,10 +7,10 @@ The objective of this project was to analyze macro-level global energy consumpti
 
 ---
 
-### 🗄️ The Data Journey (The "How")
+### 🗄️ The Data Journey
 To perform this analysis, I bypassed static local files and established a **Live Web Connection** to the authoritative *'Our World in Data'* (OWID) global energy repository. This dataset was massive, containing over **22,000 historical records** across 120+ technical columns.
 
-#### Data Engineering & Cleansing (Power Query)
+#### Data Engineering & Cleansing 
 Working with global datasets often means dealing with missing or sparse data. I utilized **Power Query** to surgically clean and optimize the model before any visual analysis took place:
 * **Data Reduction:** Filtered the dataset to focus strictly on the last 20 years (>= 2004), significantly reducing processing load and focusing the narrative on modern transition phases.
 * **Dimensional Modeling:** Extracted only the core consumption metrics (Coal, Oil, Gas, Nuclear, Renewables), stripping away irrelevant columns to create a lean, highly performant data model.
@@ -18,7 +18,7 @@ Working with global datasets often means dealing with missing or sparse data. I 
 
 ---
 
-### 💡 Key Insights (The "So What")
+### 💡 Key Insights 
 The dynamic visualization revealed several profound macro-trends:
 1.  **The Rise of Renewables:** A highly visible, exponential expansion in the renewable energy band (solar and wind) post-2010, driven by global policy shifts and dropping technology costs.
 2.  **The Resilience of Natural Gas:** Despite the push for green energy, natural gas consumption showed steady, resilient growth, cementing its role as the critical "bridge fuel" stabilizing the grid during the transition.
