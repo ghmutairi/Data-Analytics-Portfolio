@@ -52,5 +52,7 @@ delay_analysis = df_massive.groupby(['Destination_Rig', 'Shipping_Mode']).agg({
 critical_bottlenecks = delay_analysis[delay_analysis['Delay_Days'] > 7].sort_values(by='Delay_Days', ascending=False)
 
 print(critical_bottlenecks.head())
+```
+
 
 📊 Analysis Output
