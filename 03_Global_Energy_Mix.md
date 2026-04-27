@@ -30,27 +30,19 @@ This project highlights my capability to connect to live, massive external datab
 ---
 
 ### 💻 Data Transformation (Power Query M-Code)
-Below is a snippet of the advanced Power Query (M) formula I generated to clean the dataset, filter the timeline, and handle null values:
+### 🛠️ Data Engineering & Cleansing (Power Query)
+To ensure absolute accuracy and control over the data model, I manually engineered and cleansed the raw dataset using the Power Query interface. My step-by-step transformation process included:
 
-```powerquery
-let
-    // 1. Establishing Live Web Connection
-    Source = Csv.Document(Web.Contents("[https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-data.csv](https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-data.csv)"),[Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.None]),
-    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-    
-    // 2. Data Typing & Time Filtering (>= 2004)
-    ChangedType = Table.TransformColumnTypes(PromotedHeaders,{{"year", Int64.Type}, {"country", type text}}),
-    FilteredYears = Table.SelectRows(ChangedType, each [year] >= 2004),
-    
-    // 3. Column Selection (Data Model Optimization)
-    SelectedColumns = Table.SelectColumns(FilteredYears,{"country", "year", "coal_consumption", "gas_consumption", "oil_consumption", "nuclear_consumption", "renewables_consumption"}),
-    
-    // 4. Data Cleansing (Null Handling)
-    ReplacedNulls = Table.ReplaceValue(SelectedColumns,null,0,Replacer.ReplaceValue,{"coal_consumption", "gas_consumption", "oil_consumption", "nuclear_consumption", "renewables_consumption"})
-in
-    ReplacedNulls
-```
-📊 The Energy Landscape Visualized (Power BI):
+* **Direct Data Connection:** Connected directly to the external repository via the Power BI interface, ensuring the data model could handle massive datasets without relying on static Excel downloads.
+* **Strategic Filtering:** Filtered the dataset to focus exclusively on the last 20 years (>= 2004). This crucial step significantly reduced processing load and focused the narrative purely on modern energy transition phases.
+* **Dimensional Modeling:** Manually selected only the core consumption metrics (Coal, Oil, Gas, Nuclear, Renewables), stripping away irrelevant columns to create a lean, highly performant data model.
+* **Data Imputation:** Identified `null` values (common in developing nations' historical reports) and systematically replaced them with `0` using the transform features, ensuring flawless mathematical aggregations in the final visual layers.
+
+
+
+  
+### 📊 The Energy Landscape Visualized (Power BI):
 [Global Energy Mix Transitions & Consumption Trends (2004 - 2024).pdf](https://github.com/user-attachments/files/27099060/Global.Energy.Mix.Transitions.Consumption.Trends.2004.-.2024.pdf)
+
 <img width="1112" height="639" alt="GE" src="https://github.com/user-attachments/assets/9120eeca-7c57-4a44-8233-5fd311b2f80b" />
 
